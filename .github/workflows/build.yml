@@ -60,5 +60,5 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"felipementel_Arquitetura_src" /o:"felipementel" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet restore
-          dotnet build --configuration Release --framework net6.0
+          dotnet build src/Arquitetura.Fundamentos.sln --configuration Release --framework net6.0
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
