@@ -25,7 +25,7 @@ namespace Arquitetura.Fundamentos.DI
 
             // Register your types, for instance:
             Container.Register<IMensagem, Email>(Lifestyle.Singleton);
-            //Container.Register<IMensagem, SMS>(Lifestyle.Singleton);
+            // Container.Register<IMensagem, SMS>(Lifestyle.Singleton);
             Container.Register<IClienteService, ClienteService>(Lifestyle.Transient);
             Container.Register<IClienteRepository, ClienteRepository>(Lifestyle.Transient);
 
